@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TG Telecom | Internet Fibra Óptica</title>
+<meta name="description" content="TG Telecom: provedor de internet banda larga por fibra óptica. Planos de 100 a 700 Mega a partir de R$ 59,90/mês, com Wi-Fi 6 e TV, filmes e séries.">
+<meta name="theme-color" content="#00122E">
+<meta property="og:title" content="TG Telecom | Internet Fibra Óptica">
+<meta property="og:description" content="Provedor de internet banda larga por fibra óptica. Planos de 100 a 700 Mega a partir de R$ 59,90/mês, com Wi-Fi 6 e TV, filmes e séries.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+/* ===== CORES DA MARCA — troque aqui ===== */
+:root{
+  --green:#004499;      /* azul da marca (botões, destaques) */
+  --green-2:#6FAEFF;    /* azul claro para textos de destaque sobre o fundo escuro */
+  --blue:#1F6FD6;
+  --blue-2:#A8CFFF;
+  --ink:#00122E;        /* fundo: azul-marinho no tom da logo (#0044A0) */
+  --ink-hover:#06265A;
+  --ink-2:#031D45;      /* cards */
+  --ink-3:#031D45;
+  --text:#F2F6FC;
+  --muted:#A9B8D4;
+  --line:rgba(140,180,255,.13);
+  --light:#F5F6F8;
+  --light-text:#010101;
+  --radius:22px;
+  --grad:linear-gradient(120deg,var(--blue-2) 0%,var(--green-2) 45%,var(--blue) 100%);
+}
+.hero{height:360vh}
+.logo img{height:56px}
+footer .logo img{height:84px}
+.logo{height:auto}
+footer .logo{margin-bottom:10px}
+</style>
+<link rel="stylesheet" href="assets/site.css">
+<!-- TEMA CLARO (teste): ativo só com index.html?tema=claro (ou abrindo teste-fundo-branco.html) -->
+<script>if(/[?&#]tema=claro/.test(location.search+location.hash)){document.documentElement.classList.add('tema-claro');document.querySelector('meta[name=theme-color]')&&document.querySelector('meta[name=theme-color]').setAttribute('content','#2F7BE6');}</script>
+<link rel="stylesheet" href="assets/tema-claro.css">
+<style id="aparencia">:root{--fs-base:16px;--h-scale:1;--hero-scale:1;--wrap-max:1200px;--sec-pad:120px;--btn-fs:13px;--btn-py:15px;--btn-px:28px;--btn-r:40px;--btn-fw:500;--btn-tt:none;--menu-fs:15px;--wa-size:62px;--pl-gap:22px;--pl-r:12px;--pl-pad:28px;--pl-num:1;--pl-li:15px;--pl-max:100%;--pl-btn-fs:var(--btn-fs);}
+body{font-family:'Inter',system-ui,sans-serif;font-size:var(--fs-base)}
+h1,h2,h3,h4,.big-speed,.plan .speed,.plan .price,.logo-text,.cov-stats b,.step .n,form.lead h3,.cover-card h3,.tool h3{font-family:'Inter',system-ui,sans-serif}
+.btn{font-size:var(--btn-fs);padding:var(--btn-py) var(--btn-px);border-radius:var(--btn-r);font-weight:var(--btn-fw);text-transform:var(--btn-tt)}
+.phase h1,.phase h2{font-size:calc(clamp(40px,6.4vw,84px) * var(--hero-scale))}
+.big-speed{font-size:calc(clamp(90px,17vw,240px) * var(--hero-scale))}
+.sec-head h2{font-size:calc(clamp(34px,4.4vw,56px) * var(--h-scale))}
+@media (min-width:621px){.wrap{width:min(var(--wrap-max),100% - 40px)}.sec{padding:var(--sec-pad) 0}}
+@media (min-width:1101px){nav.menu a{font-size:var(--menu-fs)}nav.menu .btn{font-size:var(--btn-fs)}}
+#planos .sec-head{text-align:center;margin-inline:auto}
+#planos .sec-head .eyebrow{justify-content:center}
+.plans{--gap:var(--pl-gap);max-width:var(--pl-max);margin-left:auto;margin-right:auto}
+.plans .plan{border-radius:var(--pl-r)}
+.plans:not(.compact) .plan{padding:34px var(--pl-pad) 30px}
+.plans:not(.compact) .plan .speed{font-size:calc(76px * var(--pl-num))}
+.plans.compact .plan .speed{font-size:calc(clamp(40px,4.2vw,56px) * var(--pl-num))}
+.plans:not(.compact) .plan li{font-size:var(--pl-li)}
+.plans.compact .plan li{font-size:calc(var(--pl-li) - 1.5px)}
+.plans .plan .btn{font-size:var(--pl-btn-fs)}
+.wa-float{width:var(--wa-size);height:var(--wa-size);right:22px;left:auto}
+.wa-float svg{width:calc(var(--wa-size) * .52);height:calc(var(--wa-size) * .52)}
+.anatel svg{width:18px;height:18px;color:#fff}
+</style>
+</head>
+<body>
+
+<!-- Ícones reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.22-8.24 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" d="m5 12 5 5L20 7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></g></symbol>
+</svg>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap">
+    <a class="call keep" href="tel:+550000000000">Ligue e assine já: <b>(00) 0000-0000</b></a>
+    <div class="links">
+      <a href="https://www.speedtest.net" target="_blank" rel="noopener">Teste de velocidade</a>
+      <a class="keep" href="#ferramentas">Central de Assinatura</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="TG TELECOM">
+      <img src="assets/img/logo.png" alt="TG Net Telecom" width="434" height="374" onerror="this.parentNode.classList.add('fallback')">
+      <span class="logo-text">TG <span>TELECOM</span></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#inicio">Início</a><a href="#planos">Planos</a><a href="#sobre">Sobre</a><a href="#depoimentos">Depoimentos</a><a href="#cobertura">Cobertura</a><a href="#contato">Contato</a>
+      <a class="btn btn-primary" href="#ferramentas"><svg><use href="#i-user"/></svg> Central de Assinatura</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO 3D -->
+<section class="hero" id="inicio">
+  <div class="hero-sticky">
+    <div class="hero-fallback"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="hero-vignette"></div>
+    <div class="hero-copy">
+      <!-- Fase 1: globo centralizado em cima · headline embaixo à esquerda · sub-head + botões embaixo à direita -->
+      <div class="phase hero-split" data-from="0" data-to=".24">
+        <div class="wrap">
+          <!-- cards flutuantes ao lado do globo (só no desktop) -->
+          <div class="hud hud-a mono" aria-hidden="true">
+            <div class="hud-top"><span class="dot"></span>rede_tg <b>ativa</b></div>
+            <div class="hud-big">9<small>ms</small></div>
+            <div class="hud-cap">ping · <span data-local>Recife · PE</span></div>
+          </div>
+          <div class="hud hud-b mono" aria-hidden="true">
+            <div class="hud-top">plano_simetrico</div>
+            <div class="hud-bar"><span>↓</span><i><b></b></i><em>700 Mbps</em></div>
+            <div class="hud-bar"><span>↑</span><i><b></b></i><em>700 Mbps</em></div>
+            <div class="hud-cap">download = upload</div>
+          </div>
+        <div class="split">
+          <div class="split-left">
+            <span class="eyebrow">Provedor de internet fibra óptica</span>
+            <h1>Internet que conecta <span class="grad-text">o seu mundo.</span></h1>
+          </div>
+          <div class="split-right">
+            <p>Banda larga por fibra óptica com a estabilidade que sua casa e sua empresa precisam. Tecnologia GPON, atendimento próximo e Wi-Fi 6.</p>
+            <div class="ctas">
+              <a class="btn btn-primary" href="#planos">Ver planos <svg><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-ghost js-wa" data-msg="Olá! Vim pelo site da TG Telecom." href="#" target="_blank" rel="noopener">Assinar pelo WhatsApp</a>
+            </div>
+            <ul class="hero-proof mono">
+              <li><svg><use href="#i-check"/></svg>Até 700 Mega</li>
+              <li><svg><use href="#i-check"/></svg>A partir de R$ 59,90</li>
+              <li><svg><use href="#i-check"/></svg>Técnico próprio</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="phase right" data-from=".30" data-to=".56">
+        <div class="wrap"><div class="inner">
+          <span class="eyebrow">100% fibra óptica</span>
+          <h2>A velocidade da luz. <span class="grad-text">Até você.</span></h2>
+          <p>Nossa rede leva seus dados por fibra óptica de ponta a ponta, com velocidade real, baixa latência e muito menos quedas.</p>
+        </div></div>
+      </div>
+      <div class="phase center" data-from=".62" data-to="1.01">
+        <div class="wrap"><div class="inner">
+          <span class="eyebrow">Planos com até</span>
+          <div class="big-speed grad-text">700<small>MEGA</small></div>
+          <div class="sym">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>100% fibra óptica</span>
+            <span><svg><use href="#i-wifi"/></svg>Wi-Fi 6 em comodato</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>TV, filmes e séries</span>
+          </div>
+          <div class="ctas">
+            <a class="btn btn-primary" href="#planos">Escolher meu plano</a>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="progress" aria-hidden="true"><b></b><b></b><b></b></div>
+    <div class="scroll-hint" id="hint"><i></i>Role para explorar</div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="strip">
+  <div class="wrap">
+    <div class="item reveal">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+      <div><h4>Fibra óptica</h4><p>Velocidade real e estável</p></div>
+    </div>
+    <div class="item reveal">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 16l4 4 4-4M17 20V4M13 8l4-4 4 4"/></svg></div>
+      <div><h4>Download = Upload</h4><p>Planos simétricos</p></div>
+    </div>
+    <div class="item reveal">
+      <div class="ic"><svg><use href="#i-wifi"/></svg></div>
+      <div><h4>Wi-Fi 6 em comodato</h4><p>A partir de 300 MEGA</p></div>
+    </div>
+    <div class="item reveal">
+      <div class="ic"><svg><use href="#i-shield"/></svg></div>
+      <div><h4>Licenciado Anatel</h4><p>Provedor regularizado</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="sec" id="planos">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Planos</span>
+      <h2>Conheça nossos planos. <span class="grad-text">Velocidade de verdade.</span></h2>
+      <p>Internet 100% fibra óptica de 100 a 700 Mega. A partir de 300 MEGA, com roteador Wi-Fi 6 e TV, filmes e séries.</p>
+    </div>
+    <div class="plans" style="--cols:3;--align:center">
+      <article class="plan reveal">
+        <div class="lbl">Plano Premium</div>
+        <div class="speed">100<small>MEGA</small></div>
+        <div class="bar"><i style="--w:14%"></i></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Conexão fibra óptica</li>
+          <li><svg><use href="#i-wifi"/></svg>Roteador próprio</li>
+        </ul>
+        <div class="price"><small class="por">Por apenas</small><span><sup>R$</sup><b data-count="59">59</b><em>,90</em><small>/mês</small></span></div>
+        <a class="btn btn-ghost js-wa" data-msg="Olá! Tenho interesse no Plano Premium de 100 MEGA (R$ 59,90/mês) da TG Telecom." href="#" target="_blank" rel="noopener">Assine já <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan reveal">
+        <div class="lbl">Plano Plus</div>
+        <div class="speed">200<small>MEGA</small></div>
+        <div class="bar"><i style="--w:29%"></i></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Conexão fibra óptica</li>
+          <li><svg><use href="#i-wifi"/></svg>Roteador próprio</li>
+        </ul>
+        <div class="price"><small class="por">Por apenas</small><span><sup>R$</sup><b data-count="69">69</b><em>,90</em><small>/mês</small></span></div>
+        <a class="btn btn-ghost js-wa" data-msg="Olá! Tenho interesse no Plano Plus de 200 MEGA (R$ 69,90/mês) da TG Telecom." href="#" target="_blank" rel="noopener">Assine já <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan reveal">
+        <div class="lbl">Plano Turbo</div>
+        <div class="speed">300<small>MEGA</small></div>
+        <div class="bar"><i style="--w:43%"></i></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Conexão fibra óptica</li>
+          <li><svg><use href="#i-wifi"/></svg><span>Roteador <b>Wi-Fi 6</b> em comodato</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8M10 9l5 2.5-5 2.5z"/></svg>Plano TV, Filmes e Séries</li>
+        </ul>
+        <div class="price"><small class="por">Por apenas</small><span><sup>R$</sup><b data-count="79">79</b><em>,90</em><small>/mês</small></span></div>
+        <a class="btn btn-ghost js-wa" data-msg="Olá! Tenho interesse no Plano Turbo de 300 MEGA (R$ 79,90/mês) da TG Telecom." href="#" target="_blank" rel="noopener">Assine já <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan reveal">
+        <div class="lbl">Plano Turbo 2</div>
+        <div class="speed">500<small>MEGA</small></div>
+        <div class="bar"><i style="--w:71%"></i></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Conexão fibra óptica</li>
+          <li><svg><use href="#i-wifi"/></svg><span>Roteador <b>Wi-Fi 6</b> em comodato</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8M10 9l5 2.5-5 2.5z"/></svg>Plano TV, Filmes e Séries</li>
+        </ul>
+        <div class="price"><small class="por">Por apenas</small><span><sup>R$</sup><b data-count="89">89</b><em>,90</em><small>/mês</small></span></div>
+        <a class="btn btn-ghost js-wa" data-msg="Olá! Tenho interesse no Plano Turbo 2 de 500 MEGA (R$ 89,90/mês) da TG Telecom." href="#" target="_blank" rel="noopener">Assine já <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan reveal featured">
+        <span class="tag">★ Mais escolhido</span>
+        <div class="lbl">Plano Ultra</div>
+        <div class="speed">600<small>MEGA</small></div>
+        <div class="bar"><i style="--w:86%"></i></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Conexão fibra óptica</li>
+          <li><svg><use href="#i-wifi"/></svg><span>Roteador <b>Wi-Fi 6</b> em comodato</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8M10 9l5 2.5-5 2.5z"/></svg>Plano TV, Filmes e Séries</li>
+        </ul>
+        <div class="price"><small class="por">Por apenas</small><span><sup>R$</sup><b data-count="99">99</b><em>,90</em><small>/mês</small></span></div>
+        <a class="btn btn-primary js-wa" data-msg="Olá! Tenho interesse no Plano Ultra de 600 MEGA (R$ 99,90/mês) da TG Telecom." href="#" target="_blank" rel="noopener">Assine já <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan reveal">
+        <div class="lbl">Plano Ultra Turbo</div>
+        <div class="speed">700<small>MEGA</small></div>
+        <div class="bar"><i style="--w:100%"></i></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Conexão fibra óptica</li>
+          <li><svg><use href="#i-wifi"/></svg><span>Roteador <b>Wi-Fi 6</b> em comodato</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8M10 9l5 2.5-5 2.5z"/></svg>Plano TV, Filmes e Séries</li>
+        </ul>
+        <div class="price"><small class="por">Por apenas</small><span><sup>R$</sup><b data-count="129">129</b><em>,90</em><small>/mês</small></span></div>
+        <a class="btn btn-ghost js-wa" data-msg="Olá! Tenho interesse no Plano Ultra Turbo de 700 MEGA (R$ 129,90/mês) da TG Telecom." href="#" target="_blank" rel="noopener">Assine já <svg><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+    <p class="plan-note reveal">*Planos e preços exclusivos para novos clientes. *Consulte viabilidade técnica no seu endereço.</p>
+  </div>
+</section>
+
+<!-- SOBRE (bento grid) -->
+<section class="sec" id="sobre">
+  <div class="wrap">
+
+    <div class="bento-head reveal">
+      <span class="pill">Sobre a TG</span>
+      <h2>Tecnologia com gente que se importa. <span class="grad-text">Sem letra miúda.</span></h2>
+      <p>Somos um provedor de internet por fibra óptica. Rede própria, atendimento próximo e transparência em cada contato com quem confia na gente.</p>
+    </div>
+
+    <div class="bento">
+
+      <!-- Card 1 (grande): rede de fibra -->
+      <article class="bcard span2 reveal">
+        <div class="bvis">
+          <div class="term mono" aria-hidden="true">
+            <div class="term-bar"><i></i><i></i><i></i></div>
+            <div class="term-body">
+              <div class="tl"><span class="w">teste_conexao --rede tg-fibra</span><span>[OK]</span></div>
+              <div class="tl sub mt"><span>localizando OLT mais próxima...</span><span>2ms</span></div>
+              <div class="tl sub"><span>autenticando ONU...</span><span>3ms</span></div>
+              <div class="tl sub"><span>sincronizando 700 Mbps ↓ / 700 Mbps ↑...</span><span>4ms</span></div>
+              <div class="tl ok"><span class="dot"></span>Conexão estável e ativa (9ms total)</div>
+            </div>
+          </div>
+        </div>
+        <div class="bfoot">
+          <div class="bt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Fibra de ponta a ponta</h3></div>
+          <p>Rede 100% fibra óptica com tecnologia GPON, da nossa central até dentro da sua casa. Menos quedas, latência baixa e velocidade real.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 (pequeno): planos simétricos -->
+      <article class="bcard reveal">
+        <div class="bvis">
+          <div class="rows mono" aria-hidden="true">
+            <div><span>↓ download</span><b>600 Mbps</b></div>
+            <div><span>↑ upload</span><b>600 Mbps</b></div>
+            <div><span>≈ ping</span><b>9 ms</b></div>
+          </div>
+        </div>
+        <div class="bfoot">
+          <div class="bt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 16l4 4 4-4M17 20V4M13 8l4-4 4 4"/></svg><h3>Download = Upload</h3></div>
+          <p>A mesma velocidade para baixar e enviar. Ideal para home office, chamadas de vídeo e jogos online.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 (pequeno): licenciado / seguro -->
+      <article class="bcard reveal">
+        <div class="bvis">
+          <div class="keyblock mono" aria-hidden="true">
+            <span class="w">anatel_scm_</span>licenca_ativa_regularizada
+            <i class="hr"></i>
+            GPON · FTTH · WPA3
+          </div>
+        </div>
+        <div class="bfoot">
+          <div class="bt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Provedor licenciado</h3></div>
+          <p>Empresa regularizada na Anatel, com rede protegida e equipamentos homologados.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 (grande): atendimento -->
+      <article class="bcard span2 reveal">
+        <div class="bvis">
+          <div class="flow mono" aria-hidden="true">
+            <div class="flow-top">
+              <div class="tagm">WHATS</div>
+              <div class="field">Oi! Minha internet está lenta hoje...</div>
+            </div>
+            <div class="flow-line"><i></i></div>
+            <div class="flow-res"><span>{ "chamado": "#2048", "status": "resolvido" }</span><span class="w">12 min</span></div>
+          </div>
+        </div>
+        <div class="bfoot">
+          <div class="bt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg><h3>Atendimento de verdade</h3></div>
+          <p>Gente da região pelo WhatsApp, telefone ou e-mail. Técnico próprio TG na instalação e no suporte, sem robô empurrando você de um lado para o outro.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS
+     ATENÇÃO: os textos e nomes abaixo são EXEMPLOS. Substitua por depoimentos reais de clientes
+     (com autorização) antes de publicar. Para usar foto, troque <span class="tm-av">XX</span>
+     por <img class="tm-av" src="assets/img/cliente.jpg" alt="Nome">. -->
+<section class="sec" id="depoimentos">
+  <div class="wrap">
+    <div class="bento-head reveal">
+      <span class="pill">Depoimentos</span>
+      <h2>Quem assina a TG, <span class="grad-text">recomenda.</span></h2>
+      <p>Veja o que os nossos clientes falam da internet e do atendimento da TG.</p>
+    </div>
+
+    <div class="tm">
+      <div class="tm-col">
+        <figure class="tm-card tm-tall reveal">
+          <div class="tm-gridbg" aria-hidden="true"></div>
+          <blockquote>“Trabalho em casa o dia todo com chamada de vídeo e não tenho mais queda. Desde que troquei para a TG, esqueci que internet dá problema.”</blockquote>
+          <figcaption><div><b>Mariana Souza</b><small>Cliente · Ultra 600</small></div><span class="tm-av">MS</span></figcaption>
+        </figure>
+        <figure class="tm-card tm-blue reveal">
+          <blockquote>“Instalação rápida e o técnico explicou tudo. Atendimento nota 10.”</blockquote>
+          <figcaption><div><b>Carlos Henrique</b><small>Cliente · Turbo 300</small></div><span class="tm-av">CH</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="tm-col tm-mid">
+        <figure class="tm-card tm-dark reveal">
+          <blockquote>“Aqui em casa são cinco pessoas conectadas ao mesmo tempo, streaming e jogo online, e a internet aguenta tudo sem travar.”</blockquote>
+          <figcaption><div><b>Fernanda Lima</b><small>Cliente · Ultra Turbo 700</small></div><span class="tm-av">FL</span></figcaption>
+        </figure>
+        <figure class="tm-card tm-dark reveal">
+          <blockquote>“Precisei de suporte num domingo e me responderam pelo WhatsApp em minutos. Gente de verdade, sem robô.”</blockquote>
+          <figcaption><div><b>Rafael Oliveira</b><small>Cliente · Plus 200</small></div><span class="tm-av">RO</span></figcaption>
+        </figure>
+        <figure class="tm-card tm-dark reveal">
+          <blockquote>“Preço justo e sem surpresa na fatura. Paguei exatamente o que foi combinado.”</blockquote>
+          <figcaption><div><b>Juliana Alves</b><small>Cliente · Premium 100</small></div><span class="tm-av">JA</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="tm-col">
+        <figure class="tm-card tm-blue reveal">
+          <blockquote>“O Wi-Fi 6 chega em todos os cômodos. Melhor decisão que tomei.”</blockquote>
+          <figcaption><div><b>Bruno Costa</b><small>Cliente · Turbo 2 500</small></div><span class="tm-av">BC</span></figcaption>
+        </figure>
+        <figure class="tm-card tm-tall reveal">
+          <div class="tm-gridbg" aria-hidden="true"></div>
+          <blockquote>“Tenho uma loja e dependo da internet para a maquininha e o sistema. Com a fibra da TG o caixa não para, e quando precisei de ajuda o técnico veio no mesmo dia.”</blockquote>
+          <figcaption><div><b>Patrícia Mendes</b><small>Comerciante · Ultra 600</small></div><span class="tm-av">PM</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="tm-rule" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- COBERTURA (bento + mapa em pontos) -->
+<section class="sec" id="cobertura">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Área de cobertura</span>
+      <h2>Será que a TG chega aí? <span class="grad-text">Consulte em segundos.</span></h2>
+      <p>Mande seu CEP ou endereço e a nossa equipe confirma se a fibra da TG já passa na sua rua.</p>
+    </div>
+
+    <div class="cov">
+      <!-- Mapa (card grande) -->
+      <article class="bcard cov-map reveal">
+        <div class="cov-vis">
+          <canvas id="coverMap" aria-hidden="true"></canvas>
+          <div class="cov-chip mono"><span class="dot"></span>rede_tg --status <b>ativa</b></div>
+          <div class="cov-techs mono"><span>GPON</span><span>FTTH</span><span>Wi-Fi 5/6</span></div>
+        </div>
+        <div class="bfoot">
+          <div class="bt"><svg><use href="#i-pin"/></svg><h3>Onde estamos</h3></div>
+          <p>Rede própria de fibra óptica em expansão constante. Se a sua rua ainda não aparece, consulte mesmo assim: estamos chegando em novos bairros.</p>
+        </div>
+      </article>
+
+      <!-- Consulta (formulário curto) -->
+      <form class="bcard cov-form reveal" id="coverForm">
+        <div class="cov-in">
+          <h3>Consulte a viabilidade</h3>
+          <p class="cg-sub">Resposta direto no seu WhatsApp.</p>
+          <hr class="cg-dash">
+          <label>CEP ou endereço<input name="endereco" required placeholder="00000-000 ou Rua, nº, bairro" autocomplete="street-address"></label>
+          <button class="btn btn-primary cov-btn" type="submit"><svg><use href="#i-pin"/></svg> Consultar meu endereço</button>
+        </div>
+      </form>
+
+      <!-- Como funciona -->
+      <article class="bcard cov-steps reveal">
+        <div class="cov-in">
+          <h3>Como funciona</h3>
+          <ol class="steps">
+            <li><span class="mono">01</span><div><b>Você envia o endereço</b><small>Pelo formulário ou WhatsApp</small></div></li>
+            <li><span class="mono">02</span><div><b>Verificamos a viabilidade</b><small>Nossa equipe confere a rede na sua rua</small></div></li>
+            <li><span class="mono">03</span><div><b>Agendamos a instalação</b><small>Técnico próprio TG, no melhor horário</small></div></li>
+          </ol>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FERRAMENTAS -->
+<section class="sec" id="ferramentas">
+  <div class="wrap">
+    <div class="tools">
+      <a class="tool reveal" href="#" target="_blank" rel="noopener"><!-- TROCAR: link da Central do Assinante -->
+        <div class="ic"><svg><use href="#i-user"/></svg></div>
+        <h3>Central do Cliente</h3>
+        <p>Acesse a Área do Assinante para consultar seu plano, boletos e informações da sua conta.</p>
+        <span class="go">Acessar <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="tool reveal" href="https://www.speedtest.net" target="_blank" rel="noopener">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l4-4"/><path d="M3.3 17a9 9 0 1 1 17.4 0"/></svg></div>
+        <h3>Teste de velocidade</h3>
+        <p>Meça agora a velocidade da sua conexão. Para um resultado preciso, faça o teste com o cabo de rede.</p>
+        <span class="go">Testar agora <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="tool reveal" href="mailto:contato@seudominio.com.br">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+        <h3>Suporte técnico</h3>
+        <p>Precisa de ajuda com sua conexão? Fale com nosso time pelo telefone, WhatsApp ou e-mail de suporte.</p>
+        <span class="go">contato@seudominio.com.br <svg><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO (estrutura "contact with globe") -->
+<section class="sec" id="contato">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Assine a TG agora. <span class="grad-text">Simples e rápido.</span></h2>
+      <p>Preencha o pré-cadastro e seu pedido chega direto no nosso WhatsApp. Se preferir, ligue ou mande um e-mail.</p>
+    </div>
+
+    <div class="cg">
+      <!-- Coluna esquerda: canais + globo em linhas -->
+      <div class="cg-left reveal">
+        <h3>Fale com a gente</h3>
+        <p class="cg-sub">Escolha o canal que preferir. Respondemos em horário comercial, no mesmo dia.</p>
+        <ul class="cg-list">
+          <li><a href="tel:+550000000000"><span class="cg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>(00) 0000-0000</a></li>
+          <li><a class="js-wa" data-msg="Olá! Vim pelo site da TG Telecom." href="#" target="_blank" rel="noopener"><span class="cg-ic wa"><svg><use href="#i-wa"/></svg></span>(00) 00000-0000 <em>· comercial</em></a></li>
+          <li><a class="js-wa" data-phone="5500000000000" data-msg="Olá! Preciso de ajuda." href="#" target="_blank" rel="noopener"><span class="cg-ic wa"><svg><use href="#i-wa"/></svg></span>(00) 00000-0000 <em>· suporte</em></a></li>
+          <li><a href="mailto:contato@seudominio.com.br"><span class="cg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>contato@seudominio.com.br</a></li>
+          <li><a href="#cobertura"><span class="cg-ic"><svg><use href="#i-pin"/></svg></span>Rua Exemplo, 000 - Bairro, Cidade - UF</a></li>
+        </ul>
+        <div class="cg-globe" aria-hidden="true"><canvas id="contactGlobe"></canvas></div>
+      </div>
+
+      <!-- Coluna direita: card do formulário -->
+      <form class="cg-card reveal" id="leadForm">
+        <h3>Pré-cadastro</h3>
+        <p class="cg-sub">Preencha os dados e retornamos rapidinho pelo WhatsApp.</p>
+        <hr class="cg-dash">
+        <div class="cg-grid">
+          <label>Nome completo<input name="nome" required placeholder="Seu nome" autocomplete="name"></label>
+          <label>WhatsApp<input name="fone" required inputmode="tel" placeholder="(00) 90000-0000" autocomplete="tel"></label>
+          <label class="full">Endereço completo<input name="endereco" required placeholder="Rua, número, bairro" autocomplete="street-address"></label>
+          <label class="full">Plano de acesso
+            <select name="plano">
+              <option>100 MEGA · R$ 59,90</option><option>200 MEGA · R$ 69,90</option><option>300 MEGA · R$ 79,90</option><option>500 MEGA · R$ 89,90</option><option selected>600 MEGA · R$ 99,90</option><option>700 MEGA · R$ 129,90</option>
+              <option>Ainda não sei</option>
+            </select></label>
+          <label class="full">Observações<textarea name="obs" placeholder="Condomínio, ponto de referência, melhor horário..."></textarea></label>
+        </div>
+        <button class="btn btn-primary cg-btn" type="submit">Enviar pelo WhatsApp <svg><use href="#i-arrow"/></svg></button>
+        <p class="cg-note">Seus dados são usados apenas para contato comercial.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <a href="#inicio" class="logo">
+          <img src="assets/img/logo.png" alt="TG Net Telecom" width="434" height="374" onerror="this.parentNode.classList.add('fallback')">
+          <span class="logo-text">TG <span>TELECOM</span></span>
+        </a>
+        <p style="margin-top:18px;max-width:320px">Provedor de internet banda larga por fibra óptica.</p>
+        <div class="social">
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="js-wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul><li><a href="#inicio">Início</a></li><li><a href="#planos">Planos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#cobertura">Cobertura</a></li><li><a href="#contato">Contato</a></li></ul>
+      </div>
+      <div>
+        <h4>Cliente</h4>
+        <ul>
+          <li><a href="#ferramentas">Central do Cliente</a></li>
+          <li><a href="https://www.speedtest.net" target="_blank" rel="noopener">Teste de velocidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="tel:+550000000000">(00) 0000-0000</a></li>
+          <li><a class="f-wa js-wa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Comercial: (00) 00000-0000</a></li>
+          <li><a class="f-wa js-wa" data-phone="5500000000000" data-msg="Olá! Preciso de ajuda." href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Suporte: (00) 00000-0000</a></li>
+          <li><a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></li>
+        </ul>
+        <a class="anatel" href="https://www.gov.br/anatel/pt-br/" target="_blank" rel="noopener"><svg><use href="#i-shield"/></svg> Provedor licenciado Anatel</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>TG TELECOM · Razão Social LTDA · CNPJ: 00.000.000/0001-00</span>
+      <span>© <span id="yr">2026</span> · Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+/* ===== CONFIGURAÇÃO DO SITE — troque aqui ===== */
+window.SITE = {
+  nome: "TG Telecom",
+  sigla: "TG",                      // aparece nos ícones voando do 3D (se não houver iconeMarca)
+  iconeMarca: "",                   // ex.: "assets/img/icone.png" (PNG quadrado com fundo transparente)
+  whatsapp: "5500000000000",        // WhatsApp comercial: 55 + DDD + número, só dígitos
+  regiao: "Pernambuco",             // rótulo do estado em destaque no globo
+  cidade: "Recife",                 // cidade marcada no mapa da seção Cobertura
+  uf: "PE",
+  animacao3d: true,
+  cores: { verde:"#004499", verde_claro:"#6FAEFF", azul:"#1F6FD6", azul_claro:"#A8CFFF", fundo:"#00122E", fundo_2:"#031D45", fundo_claro:"#F5F6F8" },
+  icones: {
+    raio: '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+    wifi: '<path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/>',
+    escudo_check: '<path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/>',
+    velocimetro: '<path d="M12 14l4-4"/><path d="M3.3 17a9 9 0 1 1 17.4 0"/>',
+    fone_ouvido: '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/>',
+    casa: '<path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/>',
+    estrela: '<path d="m12 2 3 7 7 .6-5.3 4.7 1.6 7L12 17.6 5.7 21.3l1.6-7L2 9.6 9 9z"/>',
+    jogo: '<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3M15 12h.01M18 13h.01"/>',
+    tv: '<rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/>',
+    foguete: '<path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M9 12a17 17 0 0 1 11-9 17 17 0 0 1-9 11l-2-2z"/><path d="M9 12H5l2-4h4M12 15v4l4-2v-4"/>'
+  }
+};
+/* cidade/UF nos cards do hero */
+document.querySelectorAll('[data-local]').forEach(function(el){ el.textContent = SITE.cidade + ' · ' + SITE.uf; });
+/* monta todos os links de WhatsApp a partir da config */
+document.querySelectorAll('.js-wa').forEach(function(a){
+  var phone = a.dataset.phone || SITE.whatsapp;
+  var msg = a.dataset.msg || ('Olá! Vim pelo site da ' + SITE.nome + '.');
+  a.href = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(msg);
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/globe-data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
