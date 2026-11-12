@@ -12,8 +12,11 @@ Abra o `index.html` no navegador, ou publique a pasta em qualquer hospedagem est
 - `assets/globe-data.js`: pontos do globo e do mapa.
 - `assets/img/`: logos e ícones.
 
-## Tema claro (teste)
-Abra `teste-fundo-branco.html` ou `index.html?tema=claro`. Os estilos estão em `assets/tema-claro.css`.
+## Layout
+O layout principal é o branco: a classe `tema-claro` no `<html>` do `index.html` ativa `assets/tema-claro.css`.
+
+## Prova social
+Os prints de conversas ficam em `assets/img/depoimentos/`, com foto de perfil e sobrenome borrados. Os prints originais não vão para o repositório.
 
 ## Antes de publicar
-Telefones, e-mail, endereço, CNPJ, redes sociais e os depoimentos ainda são exemplos e precisam ser trocados pelos reais.
+Telefones, e-mail, endereço, CNPJ, redes sociais e 5 dos 7 cards de depoimento ainda são exemplos e precisam ser trocados pelos reais.

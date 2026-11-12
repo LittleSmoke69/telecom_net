@@ -2,6 +2,22 @@
 /* ======================= CONFIG (vem do painel) ======================= */
 const SITE = window.SITE || {};
 const WHATS = SITE.whatsapp || "";
+// abre o WhatsApp com a mensagem; se só houver o link curto (wa.me/message), copia a mensagem para colar
+function sendWA(msg){
+  const url = window.waURL ? waURL(msg) : SITE.whatsappLink;
+  if (!/[?&]text=/.test(url)) {
+    const ok = () => toast('Mensagem copiada! É só colar na conversa do WhatsApp.');
+    const fail = () => toast('Abrimos o WhatsApp da TG: envie seu nome, endereço e o plano escolhido.');
+    try { navigator.clipboard.writeText(msg).then(ok, fail); } catch(e) { fail(); }
+  }
+  window.open(url, '_blank');
+}
+function toast(t){
+  let el = document.getElementById('toast');
+  if (!el) { el = document.createElement('div'); el.id = 'toast'; el.setAttribute('role','status'); document.body.appendChild(el); }
+  el.textContent = t; el.classList.add('on');
+  clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('on'), 5000);
+}
 const C = SITE.cores || {};
 const col = (v, d) => parseInt(String(v || d).replace('#',''), 16);
 // tema claro (teste): index.html?tema=claro
@@ -10,6 +26,17 @@ const LC = (dark, light) => LIGHT ? light : dark;
 const LB = LC('111,174,255','0,82,194'); // azul-claro dos canvases
 // navbar branca: logo com as partes brancas em preto
 if (LIGHT) document.querySelectorAll('header.nav .logo img').forEach(img => img.src = 'assets/img/logo-escura.png');
+// horário presencial (todos os dias, 08h às 20h, hora do Recife): mostra "Aberto agora" / "Fechado agora"
+document.querySelectorAll('[data-aberto]').forEach(el => {
+  const upd = () => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Recife', hour: 'numeric', hourCycle: 'h23' })
+      .formatToParts(new Date()).map(x => [x.type, x.value]));
+    const aberto = +p.hour >= 8 && +p.hour < 20;
+    el.textContent = aberto ? 'Aberto agora' : 'Fechado agora';
+    el.classList.toggle('on', aberto);
+  };
+  upd(); setInterval(upd, 60000);
+});
 // menu: marca o link da seção visível
 (() => {
   const links = [...document.querySelectorAll('nav.menu a[href^="#"]:not(.btn)')];
@@ -49,11 +76,10 @@ const lead = document.getElementById('leadForm');
 if (lead) lead.addEventListener('submit', e => {
   e.preventDefault();
   const f = new FormData(e.target);
-  const txt = `*Pré-cadastro pelo site - ${encodeURIComponent(SITE.nome || 'TG Telecom')}*%0A`+
-    `Nome: ${encodeURIComponent(f.get('nome'))}%0AWhatsApp: ${encodeURIComponent(f.get('fone'))}%0A`+
-    `Plano: ${encodeURIComponent(f.get('plano'))}%0AEndereço: ${encodeURIComponent(f.get('endereco'))}%0A`+
-    `Obs: ${encodeURIComponent(f.get('obs')||'-')}`;
-  window.open(`https://api.whatsapp.com/send?phone=${WHATS}&text=${txt}`, '_blank');
+  sendWA(`*Pré-cadastro pelo site - ${SITE.nome || 'TG Telecom'}*\n` +
+    `Nome: ${f.get('nome')}\nWhatsApp: ${f.get('fone')}\n` +
+    `Plano: ${f.get('plano')}\nEndereço: ${f.get('endereco')}\n` +
+    `Obs: ${f.get('obs') || '-'}`);
 });
 
 /* ======================= HERO: FASES DE TEXTO ======================= */
@@ -473,7 +499,7 @@ loop();
     e.preventDefault();
     const end = new FormData(form).get('endereco');
     const msg = `Olá! Gostaria de consultar a cobertura da ${SITE.nome || 'TG Telecom'} no endereço: ${end}`;
-    window.open(`https://api.whatsapp.com/send?phone=${WHATS}&text=${encodeURIComponent(msg)}`, '_blank');
+    sendWA(msg);
   });
   if (!c || !GD) return;
   const g = c.getContext('2d'), still = matchMedia('(prefers-reduced-motion: reduce)').matches;

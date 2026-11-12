@@ -4,3 +4,5 @@ image 29.png
 Thumbs.db
 desktop.ini
 .DS_Store
+# prints originais de clientes (sem borrar): ficam só no computador, não vão para o GitHub
+WhatsApp Image*

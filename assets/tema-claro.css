@@ -1,4 +1,4 @@
-/* TEMA CLARO (teste) — ativo com index.html?tema=claro ou abrindo teste-fundo-branco.html
+/* LAYOUT BRANCO (principal) — ativo pela classe tema-claro no <html> do index.html
    Parte 1 gerada automaticamente a partir de site.css; parte 2 (no fim) são os ajustes manuais. */
 html.tema-claro .anatel svg{color:#0B2D63}
 html.tema-claro body{background:var(--ink);color:var(--text)}
@@ -229,19 +229,6 @@ html.tema-claro .btn-primary{background:#0052C2;box-shadow:0 0 0 1px rgba(0,68,1
 html.tema-claro .btn-primary:hover{background:#0A5FD6}
 html.tema-claro .btn-ghost{background:rgba(0,68,153,0.022);border-color:rgba(0,68,153,0.225)}
 html.tema-claro input,html.tema-claro select,html.tema-claro textarea{background:#EAF2FC;border-color:var(--line)}
-html.tema-claro .tm-card{border:1px solid var(--line);background:var(--ink-2)}
-html.tema-claro .tm-card:hover{border-color:rgba(0,68,153,0.288)}
-html.tema-claro .tm-gridbg{background-image:linear-gradient(to right,rgba(0,68,153,0.055) 1px,transparent 1px),linear-gradient(to bottom,rgba(0,68,153,0.055) 1px,transparent 1px);background-size:50px 56px}
-html.tema-claro .tm-tall::after{background:var(--grad)}
-html.tema-claro .tm-blue{background:linear-gradient(150deg,#0A63E0 0%,#0052C2 55%,#00419C 100%);border-color:rgba(0,68,153,0.315)}
-html.tema-claro .tm-dark{background:#EAF2FC}
-html.tema-claro .tm-card blockquote{color:#0E254D}
-html.tema-claro .tm-blue blockquote{color:#0B2D63}
-html.tema-claro .tm-card figcaption b{color:#0B2D63}
-html.tema-claro .tm-card figcaption small{color:var(--muted)}
-html.tema-claro .tm-blue figcaption small{color:rgba(11,45,99,0.78)}
-html.tema-claro .tm-av{color:#0B2D63;background:linear-gradient(140deg,#1F6FD6,#E3EDFB);border:1px solid rgba(0,68,153,0.27)}
-html.tema-claro .tm-blue .tm-av{background:rgba(0,68,153,0.077);border-color:rgba(0,68,153,0.35)}
 html.tema-claro .tm-rule{background:var(--line)}
 html.tema-claro .tm-rule::before,html.tema-claro .tm-rule::after{border:1px solid rgba(0,68,153,0.315);background:var(--ink-2)}
 
@@ -262,7 +249,10 @@ html.tema-claro h1,html.tema-claro h2,html.tema-claro h3{color:#0A3A85}
 html.tema-claro .topbar,html.tema-claro header.nav,html.tema-claro footer{
   --text:#fff; --muted:rgba(255,255,255,.85); --line:rgba(255,255,255,.22); --ink:var(--bar);
 }
-html.tema-claro .topbar{background:#2468CC;border-bottom-color:rgba(255,255,255,.18)}
+html.tema-claro .topbar{background:#004499;border-bottom-color:rgba(255,255,255,.12)}
+html.tema-claro .topbar a{color:rgba(255,255,255,.92);font-weight:500}
+html.tema-claro .topbar a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+html.tema-claro .topbar b{color:#fff;font-weight:700}
 /* navbar branca com a logo escura */
 html.tema-claro header.nav,html.tema-claro body.scrolled header.nav{
   --text:#0B1A40; --muted:#3D4F75; --line:rgba(0,68,153,.1);
@@ -288,13 +278,8 @@ html.tema-claro .btn-ghost{background:#fff;color:#0A3A85;border-color:rgba(0,68,
 html.tema-claro .btn-ghost:hover{background:#EEF4FD}
 
 /* textos sobre fundos azuis continuam brancos */
-html.tema-claro .tm-blue,html.tema-claro .tm-blue blockquote,html.tema-claro .tm-blue figcaption b{color:#fff}
-html.tema-claro .tm-blue figcaption small{color:rgba(255,255,255,.82)}
-html.tema-claro .tm-blue .tm-av{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4);color:#fff}
-html.tema-claro .tm-av{color:#fff}
 
 /* cards com sombra leve em vez de brilho */
-html.tema-claro .bcard,html.tema-claro .plan,html.tema-claro .tool,html.tema-claro .tm-card:not(.tm-blue),html.tema-claro .cg-card,html.tema-claro .hud{
   box-shadow:0 1px 2px rgba(16,52,110,.05),0 10px 30px rgba(16,52,110,.07)}
 
 /* hero: a cena 3D fica sobre branco */
@@ -311,4 +296,59 @@ html.tema-claro .hud-bar i{background:rgba(0,68,153,.1)}
 html.tema-claro .plan.featured .tag{background:#0052C2;border-color:#0052C2;color:#fff}
 /* no celular o desfoque prenderia o menu (position:fixed) dentro da barra */
 @media (max-width:1100px){ html.tema-claro header.nav,html.tema-claro body.scrolled header.nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff} }
-html.tema-claro .tm-av{background:linear-gradient(140deg,#1F6FD6,#0A3A85);border-color:rgba(0,68,153,.25)}
+
+/* ===== DEPOIMENTOS: prints reais do WhatsApp ===== */
+html.tema-claro .prints{text-align:center}
+html.tema-claro .prints-head{display:inline-flex;align-items:center;gap:10px;margin:0 0 36px;font-size:15px;font-weight:500;color:#3D4F75}
+html.tema-claro .prints-head svg{width:20px;height:20px;color:#25D366}
+html.tema-claro .prints-row{display:flex;justify-content:center;align-items:flex-start;gap:56px 48px;flex-wrap:wrap}
+html.tema-claro .depo{margin:0;width:min(330px,100%);text-align:left}
+html.tema-claro .print{display:block;padding:9px;border-radius:36px;background:#0B1A40;
+  box-shadow:0 2px 4px rgba(16,52,110,.08),0 30px 60px -20px rgba(16,52,110,.35);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+html.tema-claro .print img{display:block;width:100%;height:auto;border-radius:28px}
+html.tema-claro .depo:nth-child(odd) .print{transform:rotate(-2deg)}
+html.tema-claro .depo:nth-child(even) .print{transform:rotate(2deg)}
+html.tema-claro .depo:nth-child(even){margin-top:40px}
+html.tema-claro .print:hover{transform:rotate(0) translateY(-6px);box-shadow:0 2px 4px rgba(16,52,110,.08),0 40px 70px -20px rgba(16,52,110,.45)}
+html.tema-claro .depo figcaption{margin-top:28px;padding:20px 22px;border-radius:16px;border:1px solid rgba(0,68,153,.14);background:#F3F7FE}
+html.tema-claro .depo blockquote{margin:0 0 14px;font-size:16px;line-height:1.55;color:#0B2D63;text-wrap:pretty}
+html.tema-claro .depo figcaption b{display:block;font-size:16px;font-weight:600;color:#0A3A85}
+html.tema-claro .depo figcaption small{display:inline-flex;align-items:center;gap:6px;margin-top:2px;font-size:13px;color:#4A6390}
+html.tema-claro .depo figcaption small::before{content:"";width:6px;height:6px;border-radius:50%;background:#25D366}
+@media (max-width:720px){
+  html.tema-claro .prints-row{flex-wrap:nowrap;justify-content:flex-start;align-items:stretch;overflow-x:auto;scroll-snap-type:x mandatory;gap:18px;padding:6px 20px 24px;margin-inline:-20px}
+  html.tema-claro .depo{flex:0 0 80%;scroll-snap-align:center}
+  html.tema-claro .depo:nth-child(n){margin-top:0}
+  html.tema-claro .depo:nth-child(n) .print{transform:none}
+}
+
+/* aviso "mensagem copiada" */
+html.tema-claro #toast{position:fixed;left:50%;bottom:28px;z-index:90;max-width:calc(100% - 32px);padding:14px 20px;border-radius:14px;background:#0B1A40;color:#fff;font-size:14px;font-weight:500;box-shadow:0 20px 40px -12px rgba(16,52,110,.45);transform:translate(-50%,20px);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+html.tema-claro #toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ===== COBERTURA: bairros atendidos ===== */
+html.tema-claro .bairros{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0}
+html.tema-claro .bairros li{padding:6px 12px;border-radius:999px;border:1px solid rgba(0,68,153,.18);background:#fff;font-size:13px;font-weight:500;color:#0A3A85}
+html.tema-claro .bairros li::before{content:"";display:inline-block;width:6px;height:6px;margin-right:7px;border-radius:50%;background:#0052C2;vertical-align:1px}
+html.tema-claro .bfoot .bairros-nota{margin-top:14px;font-size:13px;color:#5C719B}
+
+/* ===== CONTATO: horário de atendimento ===== */
+html.tema-claro .hours{margin-top:28px;padding:18px;border-radius:14px;border:1px solid rgba(0,68,153,.14);background:#F6F9FE;max-width:440px}
+html.tema-claro .hours h4{margin:0 0 12px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#4A6390}
+html.tema-claro .hours-row{display:flex;align-items:center;gap:12px;padding:10px 0}
+html.tema-claro .hours-row + .hours-row{border-top:1px dashed rgba(0,68,153,.14)}
+html.tema-claro .hours-row .cg-ic svg{width:16px;height:16px}
+html.tema-claro .hours-row div{flex:1;min-width:0}
+html.tema-claro .hours-row b{display:block;font-size:14px;font-weight:600;color:#0B2D63}
+html.tema-claro .hours-row small{display:block;margin-top:2px;font-size:13px;color:#4A6390}
+html.tema-claro .hours-status{flex:none;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;background:#EEF1F6;color:#5C719B}
+html.tema-claro .hours-status:empty{display:none}
+html.tema-claro .hours-status.on{background:#E3F7EA;color:#127A3A}
+html.tema-claro .hours-status.on::before{content:"";display:inline-block;width:6px;height:6px;margin-right:6px;border-radius:50%;background:#1DB954;vertical-align:1px}
+
+/* ===== RODAPÉ: coluna de horários ===== */
+@media (min-width:1101px){ html.tema-claro .fcols{grid-template-columns:1.3fr .9fr 1fr 1.2fr 1fr;gap:32px} }
+html.tema-claro .f-hours li{display:flex;align-items:center;gap:8px}
+html.tema-claro .f-hours li b{margin-top:6px;font-weight:600;color:#fff}
+html.tema-claro .f-hours li:first-child b{margin-top:0}
+html.tema-claro .f-hours svg{width:15px;height:15px;flex:none;opacity:.85}

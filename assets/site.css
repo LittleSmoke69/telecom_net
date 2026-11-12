@@ -597,52 +597,10 @@ footer{background:#000D24}
 .btn-ghost{background:rgba(255,255,255,.04);border-color:rgba(140,180,255,.25)}
 input,select,textarea{background:#000D24;border-color:var(--line)}
 
-/* =========================================================
-   DEPOIMENTOS (grade 3 colunas: card alto com grade, azul, escuro)
-   ========================================================= */
-.tm{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:stretch}
-.tm-col{display:flex;flex-direction:column;gap:10px}
-.tm-card{position:relative;overflow:hidden;margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px;padding:24px;border-radius:14px;border:1px solid var(--line);background:var(--ink-2);transition:border-color .3s,transform .3s}
-.tm-card:hover{border-color:rgba(140,180,255,.32)}
-.tm-tall{flex:7 0 auto;justify-content:flex-end;min-height:330px}
-.tm-col > .tm-blue{flex:3 0 auto}
-.tm-mid .tm-card{flex:1 0 auto}
-.tm-gridbg{position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(to right,rgba(140,180,255,.10) 1px,transparent 1px),linear-gradient(to bottom,rgba(140,180,255,.10) 1px,transparent 1px);
-  background-size:50px 56px;
-  -webkit-mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 60%,transparent 110%);
-          mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 60%,transparent 110%)}
-.tm-tall::after{content:"";position:absolute;left:24px;top:22px;width:44px;height:44px;opacity:.9;
-  background:var(--grad);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.6 5C6 6.6 4 9.4 4 13.4V19h6.4v-6.4H7.2c0-2.6 1.2-4.4 3.4-5.6zm10 0C16 6.6 14 9.4 14 13.4V19h6.4v-6.4h-3.2c0-2.6 1.2-4.4 3.4-5.6z'/%3E%3C/svg%3E") center/contain no-repeat;
-          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.6 5C6 6.6 4 9.4 4 13.4V19h6.4v-6.4H7.2c0-2.6 1.2-4.4 3.4-5.6zm10 0C16 6.6 14 9.4 14 13.4V19h6.4v-6.4h-3.2c0-2.6 1.2-4.4 3.4-5.6z'/%3E%3C/svg%3E") center/contain no-repeat}
-.tm-blue{background:linear-gradient(150deg,#0A63E0 0%,#0052C2 55%,#00419C 100%);border-color:rgba(140,190,255,.35)}
-.tm-dark{background:#000D24}
-.tm-card blockquote{position:relative;margin:0;font-size:16px;line-height:1.6;color:#E4ECFA;text-wrap:pretty}
-.tm-blue blockquote{color:#fff}
-.tm-card figcaption{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
-.tm-card figcaption b{display:block;font-size:19px;font-weight:600;letter-spacing:-.02em;color:#fff}
-.tm-card figcaption small{display:block;margin-top:3px;font-size:14px;color:var(--muted)}
-.tm-blue figcaption small{color:rgba(255,255,255,.78)}
-.tm-av{flex:none;display:grid;place-items:center;width:60px;height:60px;border-radius:14px;object-fit:cover;
-  font-weight:600;font-size:18px;letter-spacing:-.02em;color:#fff;
-  background:linear-gradient(140deg,#1F6FD6,#06265A);border:1px solid rgba(140,180,255,.3)}
-.tm-blue .tm-av{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
-.tm-rule{position:relative;height:1px;margin:40px 0 0;background:var(--line)}
+/* DEPOIMENTOS: estilos em tema-claro.css (prints) */
+.tm-rule{position:relative;height:1px;margin:56px 0 0;background:var(--line)}
 .tm-rule::before,.tm-rule::after{content:"";position:absolute;top:-7px;width:14px;height:14px;border:1px solid rgba(140,180,255,.35);background:var(--ink-2)}
 .tm-rule::before{left:-7px}.tm-rule::after{right:-7px}
-
-@media (max-width:1024px){
-  .tm{grid-template-columns:1fr 1fr}
-  .tm-mid{grid-column:1/-1;flex-direction:row;order:3}
-  .tm-mid .tm-card{flex:1 1 0}
-}
-@media (max-width:720px){
-  .tm{grid-template-columns:1fr}
-  .tm-mid{flex-direction:column}
-  .tm-tall{min-height:0;padding-top:84px}
-  .tm-card figcaption b{font-size:17px}
-  .tm-av{width:50px;height:50px;font-size:16px}
-}
 
 /* celular: o desfoque da barra prendia o menu (position:fixed) dentro dela após rolar */
 @media (max-width:1100px){ body.scrolled header.nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(0,18,46,.97)} }
